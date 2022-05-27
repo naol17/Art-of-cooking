@@ -45,4 +45,22 @@ export default function RecipeScreen(props) {
         let ingredient = item;
         navigation.navigate("Ingredient", { ingredient, name });
       };
-      
+      return (
+        <ScrollView style={styles.container}>
+          <View style={styles.carouselContainer}>
+            <View style={styles.carousel}>
+              <Carousel
+                ref={slider1Ref}
+                data={item.photosArray}
+                renderItem={renderImage}
+                sliderWidth={viewportWidth}
+                itemWidth={viewportWidth}
+                inactiveSlideScale={1}
+                inactiveSlideOpacity={1}
+                firstItem={0}
+                loop={false}
+                autoplay={false}
+                autoplayDelay={500}
+                autoplayInterval={3000}
+                onSnapToItem={(index) => setActiveSlide(0)}
+              />      
