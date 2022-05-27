@@ -37,3 +37,34 @@ function MainNavigator() {
     </Stack.Navigator>
   )
 } 
+
+
+const Drawer = createDrawerNavigator();
+
+function DrawerStack() {
+  return(
+    <Drawer.Navigator
+      drawerPosition='left'
+      initialRouteName='Main'
+      drawerStyle={{
+        width: 250
+      }}
+      screenOptions={{headerShown: false}}
+      drawerContent={({navigation})=> <DrawerContainer navigation={navigation}/>}
+    >
+      <Drawer.Screen name='Main' component={MainNavigator} />
+    </Drawer.Navigator>
+  )
+} 
+
+
+ export default function AppContainer() {
+  return(
+    <NavigationContainer>
+      <DrawerStack/>
+    </NavigationContainer>
+  )
+} 
+ 
+
+console.disableYellowBox = true;
