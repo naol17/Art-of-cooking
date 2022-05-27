@@ -22,3 +22,16 @@ const styles = StyleSheet.create({
         width: viewportWidth,
         height: 250
       },
+      paginationContainer: {
+        flex: 1,
+        position: 'absolute',
+        alignSelf: 'center',
+        paddingVertical: 8,
+        marginTop: 200
+      },
+      paginationDot: {
+        width: 8,
+        height: 8,
+        borderRadius: 4,
+        marginHorizontal: 0
+      },
