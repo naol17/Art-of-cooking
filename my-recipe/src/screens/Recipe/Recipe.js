@@ -63,4 +63,30 @@ export default function RecipeScreen(props) {
                 autoplayDelay={500}
                 autoplayInterval={3000}
                 onSnapToItem={(index) => setActiveSlide(0)}
-              />      
+              />
+               <Pagination
+            dotsLength={item.photosArray.length}
+            activeDotIndex={activeSlide}
+            containerStyle={styles.paginationContainer}
+            dotColor="rgba(255, 255, 255, 0.92)"
+            dotStyle={styles.paginationDot}
+            inactiveDotColor="white"
+            inactiveDotOpacity={0.4}
+            inactiveDotScale={0.6}
+            carouselRef={slider1Ref.current}
+            tappableDots={!!slider1Ref.current}
+          />
+        </View>
+        </View>
+      <View style={styles.infoRecipeContainer}>
+        <Text style={styles.infoRecipeName}>{item.title}</Text>
+        <View style={styles.infoContainer}>
+          <TouchableHighlight onPress={() => navigation.navigate("RecipesList", { category, title })}>
+            <Text style={styles.category}>{getCategoryName(item.categoryId).toUpperCase()}</Text>
+          </TouchableHighlight>
+        </View>
+
+        <View style={styles.infoContainer}>
+          <Image style={styles.infoPhoto} source={require("../../../assets/icons/time.png")} />
+          <Text style={styles.infoRecipe}>{item.time} minutes </Text>
+        </View>      
