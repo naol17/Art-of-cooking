@@ -35,3 +35,32 @@ const styles = StyleSheet.create({
         borderRadius: 4,
         marginHorizontal: 0
       },
+      infoRecipeContainer: {
+        flex: 1,
+        margin: 25,
+        marginTop: 20,
+        justifyContent: 'center',
+        alignItems: 'center'
+      },
+      infoContainer: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+      },
+      buttonContainer: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+      },
+      infoPhoto: {
+        height: 20,
+        width: 20,
+        marginRight: 0
+      },
+      infoRecipe: {
+        fontSize: 14,
+        fontWeight: 'bold',
+        marginLeft: 5,
+      },
