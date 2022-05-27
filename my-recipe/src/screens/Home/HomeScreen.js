@@ -7,3 +7,19 @@ import { getCategoryName } from "../../data/MockDataAPI";
 
 export default function HomeScreen(props) {
   const { navigation } = props;
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerLeft: () => (
+        <MenuImage
+          onPress={() => {
+            navigation.openDrawer();
+          }}
+        />
+      ),
+      headerRight: () => <View />,
+    });
+  }, []);
+
+  const onPressRecipe = (item) => {
+    navigation.navigate("Recipe", { item });
+  };
