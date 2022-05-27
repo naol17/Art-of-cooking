@@ -11,3 +11,14 @@ const styles = StyleSheet.create({
         minHeight: 250
       },
       carousel: {},
+      image: {
+        ...StyleSheet.absoluteFillObject,
+        width: '100%',
+        height: 250
+      },
+      imageContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        width: viewportWidth,
+        height: 250
+      },
