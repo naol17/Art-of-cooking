@@ -129,3 +129,6 @@ export function getRecipesByRecipeName(recipeName) {
   });
   return recipesArray;
 }
+
+// import {createAppContainer} from 'react-navigation'; 
+// import {createStackNavigator} from 'react-navigation-stack';
